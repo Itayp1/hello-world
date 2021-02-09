@@ -20,8 +20,8 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh "forever start hello-world/index.js"
-                sh "forever ls"
+                sh "forever stop hello-world/hello-world.js"
+                sh "forever start hello-world/hello-world.js"
 
             }
         }
