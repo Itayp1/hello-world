@@ -19,6 +19,7 @@ pipeline {
             steps {
 
 
+                sh 'forever list'
 
                 sh 'cd hello-world && forever start hello-world.js'
             }
