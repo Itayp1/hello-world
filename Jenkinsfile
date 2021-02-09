@@ -21,8 +21,10 @@ pipeline {
         stage('Deploy') { 
             steps {
                 script {
-                    if (forever list | grep 'project.js') {
-                sh "forever stop hello-world/hello-world.js"
+                    devServer = forever list | grep 'project.js'
+
+                    if (devServer) {
+                sh 'forever stop hello-world/hello-world.js'
                     } 
                 }
 
