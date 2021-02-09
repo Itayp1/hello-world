@@ -1,6 +1,5 @@
 pipeline {
     agent any 
-      tools {nodejs "NodeJs"}
     stages {
         stage('Build') { 
             steps {
@@ -17,7 +16,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 sh "forever start hello-world/hello-world.js"
-            
+            }
         }
     }
 }
