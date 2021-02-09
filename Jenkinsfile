@@ -3,17 +3,20 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo "start1"
+                sh "git clone https://github.com/Itayp1/hello-world.git"
+                sh "cd hello-world &&  npm i"
+
+
             }
         }
         stage('Test') { 
             steps {
-                echo "start2"
+                echo "Test"
             }
         }
         stage('Deploy') { 
             steps {
-                echo "start3"
+                sh "node hello-world/index.js"
             }
         }
     }
