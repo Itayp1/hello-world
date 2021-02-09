@@ -20,7 +20,10 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
+                if forever list | grep 'project.js' ; then
                 sh "forever stop hello-world/hello-world.js"
+                fi
+
                 sh "forever start hello-world/hello-world.js"
 
             }
