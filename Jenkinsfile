@@ -17,8 +17,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                  sh 'cd hello-world && ls'
-                  sh 'ls'
+
+
 
                 sh 'cd hello-world && forever start hello-world.js'
             }
