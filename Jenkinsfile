@@ -19,7 +19,9 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh "node hello-world/index.js"
+                sh "forever start hello-world/index.js"
+                sh "forever ls"
+
             }
         }
     }
