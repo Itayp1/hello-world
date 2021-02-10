@@ -9,7 +9,7 @@ pipeline {
                 sh 'git clone https://github.com/Itayp1/hello-world.git'
 
                 sh 'cd hello-world && sudo docker build -t helloworld .'
-                sh 'sudo docker rm --force  helloworld && sudo docker run -p 3000:3000 --name helloworld  helloworld'
+
 
                 script {
                     try {
