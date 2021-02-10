@@ -15,7 +15,7 @@ pipeline {
                     try {
                         sh 'sudo docker rm --force  helloworld'
                                  } finally {
-                        sh 'sudo docker run -p 3000:3000 --name helloworld  helloworld'
+                        sh 'sudo docker run --detach -p 3000:3000 --name helloworld  helloworld'
                     }
 
                 }
