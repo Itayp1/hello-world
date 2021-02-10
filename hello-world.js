@@ -4,7 +4,7 @@ const app = express()
 
 
 app.get("*",(req , res)=>{
-    return res.json("hello world itayp !!");
+    return res.json("hello world itayp the king!!");
 })
 
 
